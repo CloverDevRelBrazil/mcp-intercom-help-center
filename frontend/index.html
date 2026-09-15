@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Center - Clover</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    
+    <header class="header">
+      <div class="header-content">
+        <h1>🔍 Help Center Search</h1>
+        <p class="subtitle">Busque artigos de integração Clover</p>
+      </div>
+      <div id="loginStatus" class="login-status">
+        <span id="userInfo" style="display:none;">Logado ✅</span>
+        <button id="loginBtn" class="btn-login">Login</button>
+      </div>
+    </header>
+
+    <main>
+      
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <h2>Login</h2>
+          <p>Cole seu token de acesso:</p>
+          <input 
+            type="password" 
+            id="tokenInput" 
+            placeholder="seu-token-aqui"
+            class="input-field"
+          >
+          <button id="submitLoginBtn" class="btn-primary">Conectar</button>
+          <p id="loginError" class="error-message"></p>
+        </div>
+      </div>
+
+      <div id="searchInterface" style="display:none;">
+        
+        <div class="search-bar">
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Digite sua busca... (ex: integração, API, autenticação)"
+            class="input-field"
+          >
+          <button id="searchBtn" class="btn-primary">
+            <span id="searchBtnText">Buscar</span>
+            <span id="searchSpinner" class="spinner" style="display:none;">⌛</span>
+          </button>
+        </div>
+
+        <div id="results" class="results">
+          <div id="noResults" class="no-results">
+            👋 Digite algo para buscar
+          </div>
+          <div id="articlesList" class="articles-list"></div>
+        </div>
+
+        <div class="logout-section">
+          <button id="logoutBtn" class="btn-secondary">Sair</button>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <p>🔒 Seguro • Criptografado • Privado</p>
+      <p>© 2024 Clover DevRel</p>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
